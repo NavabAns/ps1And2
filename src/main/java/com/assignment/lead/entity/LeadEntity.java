@@ -112,7 +112,7 @@ public class LeadEntity {
         this.email = email;
     }
 
-    @Email(message = "Invalid email format")
+    @Email(message = "Invalid email format",regexp = "^[a-zA-Z0-9_+&*-]+(?:\\\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\\\.)+[a-zA-Z]{2,7}$")
     private String email;
 
     public LeadEntity() {
